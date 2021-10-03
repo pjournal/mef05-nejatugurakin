@@ -1,0 +1,124 @@
+---
+title: 'Assignment 1: RMarkdown Homework'
+author: "Nejat Uğur AKIN"
+date: "06/10/2021"
+output: html_document
+---
+# Who am I?  
+
+Hi! My name is Nejat Uğur AKIN. I am working at Yapı Kredi Bank as Model Validation Manager. I have 7 years experience in banking sector. As a model validator, you have to know both model development and for sure model validation process. Because of my job, I work with big data and I have to do data validation before passing the model validation. Therefore, data is very significant part of my job.
+
+The world is changing rapidly and new modelling and validation techniques have been developing. Thanks to this program, I will learn tools (R, Python etc.) in advanced level and I will integrate these tools to my job more easily. Also I promoted to model validation manager and therefore I want to convey my knowledge that I learn in here into the my team.
+
+[Here is my Linkedin profile](https://www.linkedin.com/in/nejat-uğur-akın-18296461/)  
+
+# UserR-2021 - Charting Covid with the DatawRappr-Package
+
+The lecturer - Benedict Witzenberger - is a data journalist at Süddeutsche Zeitung and he mentioned about the package that he developed called **DatawRappr**. Data driven journalism became everywhere around the news and social media during the last year. He also talked about how much data journalism is important for explaining and visualising the data to a broader audience during the Covid 19 pandemic. 
+
+Data journalists use R a lot to clean or evaluate data. However they used data visualisation tools rarely. After the introducing data journalism, he mentioned about data visualisation packages in R and also some software-as-a-service-offerings like plotly, infogram or Flourish. 
+
+After this, he talked about Datawrapper which is start-up located in Berlin and this start-up was founded by journalists and visualisation experts. News companies, Finance and government institutions use Datawrapper for creating visualisations for their reporting. He mentioned about why the companies use Datawrapper. It is very easy to use and embed into websites. It also produces powerful interactive charts. 
+
+The lecturer developed **DatawRappr** in the end of 2019.This library helps people to access the most used functions with the R. Thanks to this package, creating, updating the elements of the chart and publishing charts can be done. 
+
+Lastly, he talked about when next version will released.             
+
+[Here is the link for "Charting Covid with the DatawRappr-Package"](https://www.youtube.com/watch?v=9_xx2TmrUW4&list=PL4IzsxWztPdnviiir8c5GaarXd9vZ2TIP&index=23)
+
+# 3 R posts relevant to my interests
+
+### Logistic Regression Essentials in R 
+
+Logistic regression is a classification algorithm. It used to predict binary outcome with one or more independent variables. Logistic regression estimate the probability of class membership. The probability becomes between 0 and 1. For computing logistic regression model in R, we use **glm()** R function. To fit logistic regression, we use *family=binomial* option in R. 
+
+In simple logistic regression, we develop model with one variable to predict the probability of class membership. After model development, making predictions in the test data should be done in order to evaluate the model performance. **Predict()** function can be used to do this. *Type=“response”* option is used to find probabilities.
+
+In multiple logistic regression, there are two or more independent variables in modeling to predict probability of class membership. To obtain coefficients, **coef()** and **summary()$coef** functions can be used. 
+
+[Here is the link for "Logistic Regression Essentials in R"](http://www.sthda.com/english/articles/36-classification-methods-essentials/151-logistic-regression-essentials-in-r/)  
+
+### Data Cleaning in R Made Simple
+
+Data cleaning is a process to identify, correct or cleaning inaccurate raw data. Data cleaning is not fancy but it is very crucial to develop accurate model. 
+
+R is a great tool for fixing data issues. **Tidyverse** package helps data manipulation. This package is not an only package but it is a good start for data cleaning process. 
+
+There is a checklist to take into consideration data issues:
+
+1. Familiarize yourself with the data set
+2. Check for structural errors
+3. Check for data irregularities
+4. Decide how to deal with missing values
+5. Document data versions and changes made
+
+**Step 1: Familiarize yourself with the data set**
+
+Before starting the data cleaning process, variables in the data should be known. In addition to this, knowing data size and data types can help to understand the properties of the data.
+
+To learn data size, we can use:
+
+>file.info(“~/YourDirectoryHere/mental-heath-in -tech-2016_20161114.csv”)$size
+
+In addition to this, **str()** function helps us to learn each data type, number of observations and number of columns. This functions are good start to identify data but there are other functions to do that.
+
+**Step 2: Check for structural errors**
+
+Structural errors include faulty data types, non-unique ID numbers, mislabeled variables and string inconsistencies. 
+
+With the **names()** function, we can use all variables' labels. For instance, a data set that has long labels can cause problems to call in the code to come. Therefore these labels can be modified with **rename()** function in **dplyr** package.
+
+Faulty data types can be found with **str()** or **typeof()** function. We can change data types with different functions. For example, to change character data types into factor, we can use **as.factor()** function.
+
+If there are non-unique ID numbers in the data, then we can get rid of duplicated ID numbers with **duplicated()** or **distinct()** functions.
+
+>#with duplicated()
+df <- df[!duplicated(df$ID_Column_Name), ]
+#with distinct()
+df <- df %>% distinct(ID_Column_Name, .keep_all = TRUE)
+
+Typos, capitalization errors, misplaced punctuation, or similar character data errors are another topic for data problems. With **unique()** function, we can see what values the variable takes. If there is capitalization problem in a variable, we can use **gsub()** function to unify these responses.
+
+**Step 3: Check for data irregularities**
+
+Invalid values and outliers are two things for data irregularities. These problems can be solved with deleting observations, winsorising or doing nothing. 
+
+**Step 4: Decide how to deal with missing values**
+
+There is no single best way to handle with missing values. We can decide how to solve this problem according to the data set. **sum(is.na())** is a function that helps us to find the total number of missing values. Also, we can calculate percentage of missing values with the function below:
+
+>#percent missing values per variable
+apply(df, 2, function(col)sum(is.na(col))/length(col))
+
+We can remove variables in the data set. Also we can remove the variable with dplyr package's function **na.omit()**.
+
+Another way to handle with missing values is imputing the missing values. We can do it with mean, mode, median etc. like this:
+
+>for(i in 1:ncol(df)){
+  df[is.na(df[,i]), i] <- mean(df[,i], na.rm = TRUE)
+}
+
+**Step 5: Document data versions and changes made**
+
+**Good research are reproducible research**. Data cleaning procedures should be replicable for third parties to validate the results. 
+
+[Here is the link for "Data Cleaning in R Made Simple"](https://towardsdatascience.com/data-cleaning-in-r-made-simple-1b77303b0b17)
+
+### Create Predictive Models in R with Caret
+
+Caret is a package that is an abbreviation of **C**lassification **A**nd **R**egression **T**ree. This package covers all the stages of a pipeline to develop a machine learning model. Installing the package, developing a model, validation, properties of the model's variables and model prediction are the topics in this tutorial. Caret package is installed with the code below:
+
+>install.packages("caret")
+
+After installing the package, **Train()** function is used to develop a model. You need to determine three basic parameters in the train function which are formula, dataset and the method. **trControl** parameter can be added to control overfitting. With cross-validation, **trainControl()** function can be used. Another parameter can be added to the train() function which is **preProcess**. After training the data, we can learn which variables are the most important ones in our model. To learn this, **varImp** function is used and **ggplot** function helps us to visualise the importance of the variables.
+
+>ggplot(varImp(model.cv))
+
+**Predict()** function helps us to produce predictions and after that real values are compared with model predictions. This is the process of the model development and **Caret** package provides us to do this. 
+
+[Here is the link for "Create Predictive Models in R with Caret"](https://towardsdatascience.com/create-predictive-models-in-r-with-caret-12baf9941236)
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
