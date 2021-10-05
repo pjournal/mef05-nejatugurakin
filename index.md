@@ -2,4 +2,6 @@
 
 ### Assignments:
 
+### Week 0:
+
 [Assignment 1: RMarkdown Homework](Assignment_1.html)
