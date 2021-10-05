@@ -4,4 +4,4 @@
 
 ### Week 0:
 
-[Assignment 1: RMarkdown Homework](Assignment_1.html)
+[Assignment 1: RMarkdown Homework](https://github.com/pjournal/mef05-nejatugurakin/blob/gh-pages/Assignment_1.html)
