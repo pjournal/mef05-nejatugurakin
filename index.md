@@ -1,6 +1,6 @@
 ## Welcome to My Journal!
 
-<span style="color: red;">This is the webpage that I will show my studies and other interesting posts.</span> 
+*This is the webpage that I will show my studies and other interesting posts.*
 
 ### Assignments:
 
