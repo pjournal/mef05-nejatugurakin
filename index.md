@@ -1,6 +1,6 @@
 ## Welcome to My Journal!
 
-``` diff -*This is the webpage that I will show my studies and other interesting posts.*```
+```#003153 This is the webpage that I will show my studies and other interesting posts.```
 
 ### Assignments:
 
