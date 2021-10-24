@@ -10,4 +10,4 @@
 
 ### Week 3:
 
-[Assignment 2: İzmir's Fish Prices](Assignment_2.html)
+[Assignment 2: İzmir's Fish Prices](Assignment-2.html)
