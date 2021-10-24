@@ -7,3 +7,7 @@
 ### Week 1:
 
 [Assignment 1: RMarkdown Homework](Assignment_1.html)
+
+### Week 3:
+
+[Assignment 2: İzmir's Fish Prices](Assignment_2.html)
