@@ -11,3 +11,7 @@
 ### Week 3:
 
 [Assignment 2: İzmir's Fish Prices](Assignment_2.html)
+
+### Week 4:
+
+[Assignment 3: Netflix](Assignment_3.html)
