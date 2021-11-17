@@ -2,6 +2,8 @@
 
 *This is the webpage that I will show my studies and other interesting posts.*
 
+To see the assignments page of *Division Bell, the group I am a member of, click **[here.](https://pjournal.github.io/mef05g-division-bell)***
+
 ### Assignments:
 
 ### Week 1:
